@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS tranform</title>
+    <style>
+        .box{
+            height: 100px;
+            width:100px ;
+margin:10px;
+padding: 20px;
+            background-color:plum ;
+            border: 2px black solid;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            transition: all 2s ease-in 0s;
+        }
+        #Box1:hover{
+    background-color: azure;
+    transform:rotateX(90deg);
+}
+#Box2:hover{
+    background-color:bisque;
+    transform:translate(50px,50px);}
+
+    #Box3:hover{
+    background-color:aliceblue;
+    transform:scale(2);}
+
+    #Box4:hover{
+    background-color:azure;
+    transform:skew(90deg);}
+    </style>
+   
+</head>
+<body>
+   <div  id="Box1" class="box">Rotate1</div>
+   <div id="Box2" class="box">tranlate</div> 
+   <div  id="Box3"class="box">scale</div> 
+   <div  id="Box4"class="box">skew</div> 
+</body>
+</html>

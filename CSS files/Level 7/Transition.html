@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .Pseudo{
+            height: 25px;
+            width: 150px;
+            background-color: forestgreen;
+            border: 2px solid black;
+            border-radius: 10px;
+
+            transition-property: all;
+            transition-duration: 1s;
+            transition-timing-function:steps(3);
+            transition-delay: 0s;
+        }
+        .Pseudo:hover{
+            background-color: red;
+            height: 50px;
+            width: 200px;}
+
+            .Pseudo:active{
+                 background-color:skyblue;
+            height: 50px;
+            width: 200px;}
+    </style>
+</head>
+<body>
+    <button class="Pseudo">Pseudo Learning</button> 
+</body>
+</html>

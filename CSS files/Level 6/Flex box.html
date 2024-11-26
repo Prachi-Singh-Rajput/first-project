@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+       .box{
+        height: 175px;
+        width:175px ;
+        border: 3px solid black;
+        margin: 10px;
+       }
+       #heading{
+        margin-left: 50px;
+        text-align: center;
+       }
+       #container{
+        background-color: grey;
+        height:700px ;
+        width: 700px;
+        margin: 10px;
+        padding: 20px;
+        border: 5px black dotted;
+
+
+        display: flex;
+        /*flex direction*/
+        flex-direction: row;
+
+        /*flex(justify content) is used for main axis     only in row*/
+        justify-content: flex;
+        /*flex(wrap)*/
+        flex-wrap: wrap;
+        /*align items is used for cross axis(vertically)   only in row*/
+        align-items:center;
+
+        /*align-content: center;*/
+        
+       }
+
+       #box1{background-color: aqua;
+    order: 3;}
+       #box2{background-color: blue;}
+       #box3{background-color: skyblue;
+    align-self:flex-start;
+    }
+      /* #box4{background-color: violet;}
+       #box5{background-color: yellow;}
+       #box6{background-color:pink;}
+       #box7{background-color:coral;}*/
+    </style>
+</head>
+<body>
+    <h1 id="heading">Flex container</h1>
+    <div id="container">
+        <div id="box1" class="box">Prachi</div>
+        <div id="box2" class="box">Shalli</div>
+        <div id="box3" class="box">Shinu</div>
+       <!--- <div id="box4" class="box">kanha</div>
+        <div id="box5" class="box">krishna</div>
+        <div id="box6" class="box">govind</div>
+        <div id="box7" class="box">murari</div>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{text-align: center;}
+    </style>
+    <title>Bat ball stump game</title>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+
+<button  onclick="
+    const userChoice = 'Bat';
+let random = Math.random() * 3;
+let computerChoice;
+
+if (random > 0 && random <= 1) {
+    computerChoice = 'Bat';
+} else if (random > 1 && random <= 2) {
+    computerChoice = 'Ball';
+} else {
+    computerChoice = 'Stump';
+}
+
+const computerChoiceMsg = `Computer choice is ${computerChoice}`;
+let resultMsg;
+
+if (userChoice === computerChoice) {
+    resultMsg = `It's a tie! ${computerChoiceMsg}`;
+} else if ((userChoice === 'Bat' && computerChoice === 'Stump') ||
+           (userChoice === 'Ball' && computerChoice === 'Bat') ||
+           (userChoice === 'Stump' && computerChoice === 'Ball')) {
+    resultMsg = `User wins! ${computerChoiceMsg}`;
+} else {
+    resultMsg = `Computer wins! ${computerChoiceMsg}`;
+}
+console.log(resultMsg);
+//document.getElementById('result').innerText = resultMsg;//
+alert(`you have chosen bat.computer choice is ${computerChoice} and ${resultMsg}`)
+">Bat</button>
+
+
+
+<button  onclick="
+  const userChoices = 'Ball';
+  let randoms = Math.random() * 3;
+  let computerChoices;
+
+if (randoms > 0 && randoms <= 1) {
+    computerChoices = 'Bat';
+} else if (randoms > 1 && randoms <= 2) {
+    computerChoices = 'Ball';
+} else {
+    computerChoices = 'Stump';
+}
+
+  const computerChoiceMg = `Computer choice is ${computerChoices}`;
+  let resultMg;
+
+if (userChoices === computerChoices) {
+    resultMg = `It's a tie! ${computerChoiceMg}`;
+} else if ((userChoices === 'Bat' && computerChoices === 'Stump') ||
+           (userChoices=== 'Ball' && computerChoices === 'Bat') ||
+           (userChoices === 'Stump' && computerChoices === 'Ball')) {
+    resultMg = `User wins! ${computerChoiceMg}`;
+} else {
+    resultMg = `Computer wins! ${computerChoiceMg}`;
+}
+console.log(resultMg);
+//document.getElementById('result').innerText = resultMg;//">Ball</button>
+
+
+<button onclick="
+const userChoicess = 'Stump';
+let randomss = Math.random() * 3;
+let computerChoicess;
+
+if (randomss > 0 && randomss <= 1) {
+    computerChoice = 'Bat';
+} else if (randomss > 1 && randomss <= 2) {
+    computerChoicess = 'Ball';
+} else {
+    computerChoicess = 'Stump';
+}
+
+const computerChoiceMsgss = `Computer choice is ${computerChoicess}`;
+let resultMsgss;
+
+if (userChoicess === computerChoicess) {
+    resultMsgss = `It's a tie! ${computerChoiceMsgss}`;
+} else if ((userChoicess === 'Bat' && computerChoicess === 'Stump') ||
+           (userChoicess === 'Ball' && computerChoicess === 'Bat') ||
+           (userChoicess === 'Stump' && computerChoicess === 'Ball')) {
+    resultMsgss = `User wins! ${computerChoiceMsgss}`;
+} else {
+    resultMsgss = `Computer wins! ${computerChoiceMsgss}`;
+}
+console.log(resultMsgss);
+//document.getElementById('result').innerText = resultMsgss;//
+">Stump</button>
+<p id="result"></p>
+
+</body>
+</html>

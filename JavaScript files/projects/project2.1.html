@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body { text-align: center; }
+    </style>
+    <title>Bat Ball Stump Game</title>
+</head>
+<body>
+    <h1>Bat Ball Stump Game</h1>
+
+    <button onclick="playBat()">Bat</button>
+    <button onclick="playBall()">Ball</button>
+    <button onclick="playStump()">Stump</button>
+
+    <p id="result"></p>
+
+    <script>
+        function getComputerChoice() {
+            const choices = ['Bat', 'Ball', 'Stump'];
+            const randomIndex = Math.floor(Math.random() * 3);
+            return choices[randomIndex];
+        }
+
+        function determineResult(userChoice, computerChoice) {
+            const computerChoiceMsg = `Computer choice is ${computerChoice}`;
+            let resultMsg;
+
+            if (userChoice === computerChoice) {
+                resultMsg = `It's a tie! ${computerChoiceMsg}`;
+            } else if ((userChoice === 'Bat' && computerChoice === 'Stump') ||
+                       (userChoice === 'Ball' && computerChoice === 'Bat') ||
+                       (userChoice === 'Stump' && computerChoice === 'Ball')) {
+                resultMsg = `User wins! ${computerChoiceMsg}`;
+            } else {
+                resultMsg = `Computer wins! ${computerChoiceMsg}`;
+            }
+
+            return `You have chosen ${userChoice}. ${resultMsg}`;
+        }
+
+        function playBat() {
+            const computerChoice = getComputerChoice();
+            const resultMessage = determineResult('Bat', computerChoice);
+            document.getElementById('result').innerText = resultMessage;
+            console.log(resultMessage);
+        }
+
+        function playBall() {
+            const computerChoice = getComputerChoice();
+            const resultMessage = determineResult('Ball', computerChoice);
+            document.getElementById('result').innerText = resultMessage;
+            console.log(resultMessage);
+        }
+
+        function playStump() {
+            const computerChoice = getComputerChoice();
+            const resultMessage = determineResult('Stump', computerChoice);
+            document.getElementById('result').innerText = resultMessage;
+            console.log(resultMessage);
+        }
+    </script>
+</body>
+</html>
